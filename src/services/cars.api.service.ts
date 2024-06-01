@@ -8,14 +8,14 @@ const AxiosInstance = axios.create({
 
 const userRegistration = {
     registration: ({username, password}: IUserModel) => {
-        return fetch('owu.linkpc.net/carsAPI/v2/users', {
+        return fetch('http://owu.linkpc.net/carsAPI/v2/users', {
             method: 'POST',
             body: JSON.stringify({
                 username: username,
                 password: password
             }),
             headers: {
-                'Content-type': 'charset=UTF-8',
+                'Content-type': 'text/plain;charset=UTF-8',
             },
         })
             .then(value => value.json())
